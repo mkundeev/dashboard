@@ -3,19 +3,34 @@ import { COLORS, FONTS } from "theme";
 
 interface IProps {
   active?: boolean;
+  fill?: boolean;
 }
 
 export const NavListItem = styled.li`
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
   padding: 11px;
   border-radius: 8px;
   color: ${({ active }: IProps) => (active ? "white" : COLORS.navigationItem)};
   background-color: ${({ active }: IProps) => active && COLORS.accentNav};
   > svg > path {
     stroke: ${({ active }: IProps) => active && "white"};
+  }
+  :not(:last-child) {
+    margin-bottom: 18px;
+  }
+  :hover {
+    color: white;
+    background-color: ${COLORS.accentNav};
+  }
+  :hover div svg path {
+    fill: ${({ fill }: IProps) => fill && "white"};
+    stroke: ${({ fill, active }: IProps) => !fill && !active && "white"};
+  }
+  :hover > svg > path {
+    stroke: white;
   }
 `;
 
@@ -24,7 +39,7 @@ export const Title = styled.p`
   font-weight: ${FONTS.WEIGHTS.medium};
 `;
 
-export const IconTitleWrap = styled.li`
+export const IconTitleWrap = styled.div`
   display: flex;
   align-items: center;
 `;

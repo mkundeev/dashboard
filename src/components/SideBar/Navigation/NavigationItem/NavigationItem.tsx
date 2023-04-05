@@ -7,15 +7,17 @@ interface IProps {
   icon: ReactNode;
   active?: boolean;
   noArrow?: boolean;
+  fill?: boolean;
 }
 export default function NavigationItem({
   title,
   icon,
   noArrow,
   active,
+  fill,
 }: IProps) {
   return (
-    <Styled.NavListItem active={active}>
+    <Styled.NavListItem active={active} fill={fill}>
       <Styled.IconTitleWrap>
         {icon}
         <Styled.Title>{title}</Styled.Title>

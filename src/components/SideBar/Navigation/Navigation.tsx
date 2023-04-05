@@ -12,11 +12,11 @@ export default function Navigation() {
     <nav>
       <ul>
         <NavigationItem title="Dashboard" icon={<KeySquereIcon />} noArrow />
-        <NavigationItem title="Product" icon={<CubeIcon />} />
+        <NavigationItem title="Product" icon={<CubeIcon />} fill />
         <NavigationItem title="Customers" icon={<UserIcon />} active />
-        <NavigationItem title="Product" icon={<WalletIcon />} />
-        <NavigationItem title="Product" icon={<DiscountIcon />} />
-        <NavigationItem title="Product" icon={<MessageIcon />} />
+        <NavigationItem title="Income" icon={<WalletIcon />} />
+        <NavigationItem title="Promote" icon={<DiscountIcon />} fill />
+        <NavigationItem title="Help" icon={<MessageIcon />} fill />
       </ul>
     </nav>
   );

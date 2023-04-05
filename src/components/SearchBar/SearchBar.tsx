@@ -1,11 +1,20 @@
 import React from "react";
 import * as Styled from "./SearchBar.styled";
 
-export default function SearchBar() {
+interface IProps {
+  value: string;
+  onChange(e: React.ChangeEvent<HTMLInputElement>): void;
+}
+export default function SearchBar({ value, onChange }: IProps) {
   return (
     <Styled.SearchLabel>
       <Styled.SearchIcon />
-      <Styled.SearchInput type="text" placeholder="Search" />
+      <Styled.SearchInput
+        type="text"
+        placeholder="Search"
+        value={value}
+        onChange={onChange}
+      />
     </Styled.SearchLabel>
   );
 }
