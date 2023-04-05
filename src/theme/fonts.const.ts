@@ -7,3 +7,7 @@ export const WEIGHTS = {
   semiBold: "600",
   medium: "500",
 };
+
+export const FAMILY = {
+  normal: "Poppins",
+};

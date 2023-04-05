@@ -2,10 +2,14 @@ import React from "react";
 import Welcome from "./Welcome/Welcome";
 import * as Styled from "./Content.styled";
 
-export default function Content() {
+interface IProps {
+  children?: JSX.Element | JSX.Element[];
+}
+export default function Content({ children }: IProps) {
   return (
-    <Styled.ContentWrap>
+    <Styled.ContentContainer>
       <Welcome name="evano" />
-    </Styled.ContentWrap>
+      <Styled.ContentWrap>{children}</Styled.ContentWrap>
+    </Styled.ContentContainer>
   );
 }
