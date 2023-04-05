@@ -1,14 +1,32 @@
 import styled from "styled-components";
-import { COLORS, FONTS } from "theme";
+import { COLORS, FONTS, MEDIA } from "theme";
 
 interface IProps {
   status: string;
 }
 
+export const TableWrap = styled.div`
+  margin-bottom: 10px;
+
+  width: 100%;
+  overflow-x: auto;
+
+  @media ${MEDIA.laptop} {
+    margin-bottom: 30px;
+  }
+  @media ${MEDIA.tablet} {
+    width: fit-content;
+    overflow-x: none;
+  }
+`;
+
 export const Table = styled.table`
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 30px;
+  table-layout: fixed;
+  @media ${MEDIA.mobile} {
+    width: 450px;
+  }
 `;
 
 export const TableHeader = styled.thead`
@@ -17,10 +35,16 @@ export const TableHeader = styled.thead`
     text-align: left;
     padding-bottom: 14px;
     font-weight: ${FONTS.WEIGHTS.medium};
-  }
-  th:last-child {
-    text-align: center;
-    width: 82px;
+    :not(:last-child) {
+      padding-right: 10px;
+      @media ${MEDIA.bigLaptop} {
+        padding-right: 44px;
+      }
+    }
+    :last-child {
+      text-align: center;
+      width: 82px;
+    }
   }
   &::after {
     content: "";
@@ -33,20 +57,33 @@ export const TableHeader = styled.thead`
 `;
 
 export const TableRow = styled.tr`
+  font-size: 10px;
   font-weight: ${FONTS.WEIGHTS.medium};
   td {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    height: 69px;
     color: ${COLORS.tableText};
     border-bottom: 1px solid ${COLORS.tableBorder};
+    hyphens: auto;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    :not(:last-child) {
+      padding-right: 10px;
+      @media ${MEDIA.bigLaptop} {
+        padding-right: 44px;
+      }
+    }
+  }
+  @media ${MEDIA.tablet} {
+    font-size: 12px;
+  }
+  @media ${MEDIA.bigLaptop} {
+    font-size: 14px;
   }
 `;
 
 export const Status = styled.div`
-  margin: 0 auto;
-  width: 100%;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  max-width: 80px;
+  padding: 4px;
   border-radius: 4px;
   text-align: center;
   text-transform: capitalize;

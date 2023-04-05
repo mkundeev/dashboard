@@ -6,18 +6,19 @@ import { ReactComponent as UserIcon } from "assets/user.svg";
 import { ReactComponent as WalletIcon } from "assets/wallet.svg";
 import { ReactComponent as DiscountIcon } from "assets/discount.svg";
 import { ReactComponent as MessageIcon } from "assets/message.svg";
+import * as Styled from "./Navigation.styled";
 
 export default function Navigation() {
   return (
     <nav>
-      <ul>
+      <Styled.NavList>
         <NavigationItem title="Dashboard" icon={<KeySquereIcon />} noArrow />
         <NavigationItem title="Product" icon={<CubeIcon />} fill />
         <NavigationItem title="Customers" icon={<UserIcon />} active />
         <NavigationItem title="Income" icon={<WalletIcon />} />
         <NavigationItem title="Promote" icon={<DiscountIcon />} fill />
         <NavigationItem title="Help" icon={<MessageIcon />} fill />
-      </ul>
+      </Styled.NavList>
     </nav>
   );
 }

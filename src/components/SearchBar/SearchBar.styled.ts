@@ -5,6 +5,8 @@ import { COLORS } from "theme";
 export const SearchLabel = styled.label`
   display: block;
   position: relative;
+  width: fit-content;
+  margin-left: auto;
 `;
 
 export const SearchInput = styled.input`

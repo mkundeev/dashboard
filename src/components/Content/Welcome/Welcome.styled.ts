@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FONTS } from "theme";
+import { FONTS, MEDIA } from "theme";
 
 export const ContentWrap = styled.div`
   padding-top: 41px;
@@ -8,6 +8,9 @@ export const ContentWrap = styled.div`
 export const Welcome = styled.p`
   font-size: 24px;
   font-weight: ${FONTS.WEIGHTS.medium};
-  margin-bottom: 51px;
+  margin-bottom: 10px;
   text-transform: capitalize;
+  @media ${MEDIA.laptop} {
+    margin-bottom: 51px;
+  }
 `;

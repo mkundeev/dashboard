@@ -1,19 +1,22 @@
 import styled from "styled-components";
-import { FONTS } from "theme";
+import { MEDIA } from "theme";
 
 export const ContentContainer = styled.div`
-  padding: 41px 95px 0 71px;
+  padding: 10px;
+  width: 100%;
+  margin: 0 auto;
+  @media ${MEDIA.laptop} {
+    padding: 41px 20px 0 20px;
+  }
 `;
-export const Welcome = styled.p`
-  font-size: 24px;
-  font-weight: ${FONTS.WEIGHTS.medium};
-  margin-bottom: 51px;
-  text-transform: capitalize;
-`;
+
 export const ContentWrap = styled.div`
-  min-width: 968px;
+  width: 100%;
   position: relative;
   background-color: white;
   border-radius: 30px;
-  padding: 30px 44px 40px 38px;
+  padding: 15px;
+  @media ${MEDIA.bigLaptop} {
+    padding: 30px 44px 40px 38px;
+  }
 `;

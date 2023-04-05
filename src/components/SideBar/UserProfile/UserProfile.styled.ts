@@ -1,15 +1,19 @@
 import styled from "styled-components";
-import { COLORS, FONTS } from "theme";
+import { COLORS, FONTS, MEDIA } from "theme";
 
 export const UserProfileWrap = styled.div`
   display: flex;
+  margin-left: auto;
+  @media ${MEDIA.laptop} {
+    margin-left: 0;
+  }
 `;
 
 export const Avatar = styled.img`
   display: inline-block;
   margin-right: 12px;
   width: 42px;
-  height: auto;
+  height: 42px;
   border-radius: 50%;
 `;
 

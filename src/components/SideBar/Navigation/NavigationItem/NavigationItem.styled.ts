@@ -18,9 +18,6 @@ export const NavListItem = styled.li`
   > svg > path {
     stroke: ${({ active }: IProps) => active && "white"};
   }
-  :not(:last-child) {
-    margin-bottom: 18px;
-  }
   :hover {
     color: white;
     background-color: ${COLORS.accentNav};

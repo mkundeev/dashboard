@@ -1,10 +1,13 @@
 import styled from "styled-components";
-import { COLORS, FONTS } from "theme";
+import { COLORS, FONTS, MEDIA } from "theme";
 
 export const Logo = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 54px;
+  margin-bottom: 10px;
+  @media ${MEDIA.laptop} {
+    margin-bottom: 0;
+  }
 `;
 
 export const LogoText = styled.p`
