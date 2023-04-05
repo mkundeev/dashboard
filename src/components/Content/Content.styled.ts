@@ -6,7 +6,7 @@ export const ContentContainer = styled.div`
   width: 100%;
   margin: 0 auto;
   @media ${MEDIA.laptop} {
-    padding: 41px 20px 0 20px;
+    padding: 41px 20px 10px 20px;
   }
 `;
 
