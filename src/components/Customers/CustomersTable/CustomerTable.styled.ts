@@ -37,9 +37,6 @@ export const TableHeader = styled.thead`
     font-weight: ${FONTS.WEIGHTS.medium};
     :not(:last-child) {
       padding-right: 10px;
-      @media ${MEDIA.bigLaptop} {
-        padding-right: 44px;
-      }
     }
     :last-child {
       text-align: center;
@@ -68,9 +65,6 @@ export const TableRow = styled.tr`
     overflow: hidden;
     :not(:last-child) {
       padding-right: 10px;
-      @media ${MEDIA.bigLaptop} {
-        padding-right: 44px;
-      }
     }
   }
   @media ${MEDIA.tablet} {
