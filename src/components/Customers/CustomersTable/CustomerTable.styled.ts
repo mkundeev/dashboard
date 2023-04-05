@@ -21,11 +21,11 @@ export const TableWrap = styled.div`
 `;
 
 export const Table = styled.table`
-  width: 100%;
+  width: 450px;
   border-collapse: collapse;
   table-layout: fixed;
-  @media ${MEDIA.mobile} {
-    width: 450px;
+  @media ${MEDIA.tablet} {
+    width: 100%;
   }
 `;
 
